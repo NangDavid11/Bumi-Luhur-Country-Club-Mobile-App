@@ -1,0 +1,29 @@
+{
+  "name": "bumi-luhur-member-app",
+  "version": "1.0.0",
+  "description": "Bumi Luhur Country Club member PWA",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.6"
+  },
+  "devDependencies": {
+    "@fontsource/amarante": "^5.3.0",
+    "@fontsource/figtree": "^5.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "svgo": "^4.1.0",
+    "vite": "^5.4.21",
+    "vite-plugin-pwa": "^0.20.5"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}
