@@ -1,0 +1,63 @@
+.mcard {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 139px;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  isolation: isolate;
+  text-align: left;
+  color: #fff;
+  background: rgba(242, 242, 242, .8);
+  container-type: inline-size;
+  transition: transform .2s var(--ease), box-shadow .2s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+button.mcard:active,
+a.mcard:active { transform: scale(.985); }
+.mcard--feature { height: 160px; }
+
+.mcard__media { position: absolute; inset: 0; z-index: -1; }
+.mcard__bg,
+.mcard__cut { position: absolute; max-width: none; pointer-events: none; }
+.mcard__bg.is-cover { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mcard__tint {
+  position: absolute;
+  inset: 0;
+  /* Figma: solid tone, alpha .3 → 1 along the handle top-right → bottom-left */
+  background: linear-gradient(248deg, var(--tint-a) 30%, var(--tint-b) var(--tint-end, 153%));
+}
+.mcard__icon { position: absolute; top: 22px; left: 22px; color: #f2f2f2; }
+
+.mcard__text {
+  position: absolute;
+  left: 21px;
+  right: 21px;
+  bottom: 17.5px;
+  display: flex;
+  flex-direction: column;
+}
+.mcard__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: .1px;
+}
+.mcard__sub {
+  margin-top: 5.5px;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  letter-spacing: .1px;
+}
+.mcard--feature .mcard__icon { top: 24px; left: 24px; }
+.mcard--feature .mcard__title { font-size: 18px; line-height: 22px; font-weight: 700; text-transform: uppercase; }
+.mcard--feature .mcard__sub { margin-top: 8px; text-transform: capitalize; }
+.mcard--compact { height: 112px; }
+
+.mcard__corner {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}

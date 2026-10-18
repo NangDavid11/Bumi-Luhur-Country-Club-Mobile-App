@@ -1,0 +1,64 @@
+/* ---------------------------------------------------------------- dates */
+.dates {
+  display: flex;
+  gap: 6px;
+  margin: 0 calc(var(--pad) * -1);
+  padding: 0 var(--pad);
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-padding: 0 var(--pad);
+}
+.dates::-webkit-scrollbar { display: none; }
+.date {
+  flex: none;
+  width: 58px;
+  height: 66px;
+  border-radius: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 13px;
+  transition: background-color .2s, color .2s, transform .15s;
+}
+.date:active { transform: scale(.95); }
+.date__dow { font-size: 12px; line-height: 15px; font-weight: 500; color: var(--grey); text-transform: uppercase; }
+.date__num { margin-top: 3px; font-size: 20px; line-height: 24px; font-weight: 600; color: var(--ink-2); }
+.date.is-sunday .date__dow,
+.date.is-sunday .date__num { color: rgba(255, 0, 0, .7); }
+.date.is-active { background: var(--green); }
+.date.is-active .date__dow { color: rgba(255, 255, 255, .6); }
+.date.is-active .date__num { color: #fff; }
+
+/* ---------------------------------------------------------------- slots */
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.slot {
+  height: 64.5px;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .04), 0 1px 2px rgba(0, 0, 0, .06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color .2s, color .2s, transform .15s;
+}
+.slot:active { transform: scale(.96); }
+.slot__time { display: inline-flex; align-items: center; gap: 4px; font-size: 16px; line-height: 19px; font-weight: 600; color: var(--ink); }
+.slot__label { font-size: 11px; line-height: 13px; font-weight: 500; color: var(--green); }
+.slot--booked .slot__time,
+.slot--booked .slot__label,
+.slot--past .slot__time,
+.slot--past .slot__label { color: var(--grey); }
+.slot--past { opacity: .6; }
+.slot__lock { color: var(--grey); margin-top: -1px; }
+.slot--selected { background: var(--green); box-shadow: none; }
+.slot--selected .slot__time,
+.slot--selected .slot__label { color: #fff; }
+.slot--mine { background: rgba(48, 109, 41, .1); box-shadow: inset 0 0 0 1.5px var(--green); }
+.slot[disabled] { cursor: not-allowed; }

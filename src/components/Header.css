@@ -1,0 +1,34 @@
+.icon { display: inline-flex; flex: none; line-height: 0; }
+.icon > svg { width: 100%; height: 100%; }
+
+.hdr {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+.hdr__title { display: flex; justify-content: center; min-width: 0; padding: 0 8px; }
+.hdr__logo { color: var(--green); line-height: 0; margin-top: 0; position: relative; top: 1.5px; }
+.hdr__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fecd3d;
+  transition: transform .15s;
+}
+.hdr__avatar:active { transform: scale(.94); }
+.hdr__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.hdr__dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.hdr .round-btn .icon { margin-top: 1px; }

@@ -1,0 +1,30 @@
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 21px;
+  border-radius: var(--r-card);
+  background: #fff;
+}
+.profile__avatar { width: 76px; height: 76px; border-radius: 50%; background: #fecd3d; object-fit: cover; flex: none; }
+.profile__main { flex: 1; min-width: 0; }
+.profile__name { font-size: 18px; line-height: 22px; font-weight: 700; color: var(--ink); }
+.profile__id { margin-top: 2px; font-size: 13px; color: var(--grey); letter-spacing: .3px; }
+.profile__qr { background: var(--green); color: #fff; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+.stat {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+  padding: 14px 6px;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+}
+.stat strong { font-size: 18px; font-weight: 700; color: var(--green); }
+.stat span { font-size: 12px; color: var(--grey); font-weight: 500; }
+
+.profile__row { width: 100%; text-align: left; }
+.profile__version { margin-top: 20px; text-align: center; font-size: 12px; color: var(--grey); }
+.steps { display: grid; gap: 10px; padding-left: 20px; font-size: 14px; line-height: 21px; color: var(--grey-2); }
