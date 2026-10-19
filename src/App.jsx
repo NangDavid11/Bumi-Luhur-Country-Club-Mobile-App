@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import BottomNav from './components/BottomNav.jsx';
 import Toast from './components/Toast.jsx';
 import Home from './pages/Home.jsx';
@@ -57,6 +58,7 @@ export default function App() {
       </Suspense>
       {showNav && <BottomNav />}
       <Toast />
+      <Analytics />
     </div>
   );
 }
